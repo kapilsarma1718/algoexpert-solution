@@ -34,6 +34,14 @@ func TestGetNthFib(t *testing.T) {
 			4,
 			2,
 		},
+		{
+			5,
+			3,
+		},
+		{
+			6,
+			5,
+		},
 	}
 
 	for _, tc := range caseData {
