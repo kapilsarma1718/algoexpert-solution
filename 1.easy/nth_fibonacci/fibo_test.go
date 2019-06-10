@@ -51,6 +51,13 @@ func TestGetNthFib(t *testing.T) {
 				t.Errorf("GetNthFib1(%v) = %v, want : %v", tc.arg, result, tc.want)
 			}
 		})
+
+		t.Run(fmt.Sprintf("GetNthFib2(%v)", tc.arg), func(t *testing.T) {
+			result := td.GetNthFib2(tc.arg)
+			if result != tc.want {
+				t.Errorf("GetNthFib2(%v) = %v, want : %v", tc.arg, result, tc.want)
+			}
+		})
 	}
 
 }

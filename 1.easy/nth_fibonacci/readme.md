@@ -45,3 +45,11 @@ ulangi i = 2, i < n, i++
 
 return result
 ```
+
+**Solution 2** recusive O(2 ^ n)
+
+if n == 1 
+    return 0
+if n == 2
+    return 1
+ret fib(n - 2) + fib(n - 1)

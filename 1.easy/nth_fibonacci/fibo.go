@@ -15,3 +15,15 @@ func GetNthFib1(n int) int {
 
 	return result
 }
+
+func GetNthFib2(n int) int {
+	if n == 1 {
+		return 0
+	}
+
+	if n == 2 {
+		return 1
+	}
+
+	return GetNthFib2(n-1) + GetNthFib2(n-2)
+}
