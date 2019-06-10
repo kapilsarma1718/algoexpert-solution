@@ -7,3 +7,6 @@ find three largest number
     1. array integer 
 
     kembalikan array dengan nilai 3 angka terbesar secara berurutan dari kecil ke besar
+
+- Solution:
+O(n)
