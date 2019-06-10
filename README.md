@@ -3,7 +3,7 @@ Algoexpert solution in Go
 
 This is algoexpert solution in Golang. In each code problem, you must follow this rule.
 
-1. Write the problem
+1. Write the problem in your style so you can understand it
 2. Write the example test case
 3. Write your solution in pseudocode
 
