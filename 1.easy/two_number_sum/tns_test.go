@@ -14,7 +14,7 @@ type TestCase struct {
 	want []int
 }
 
-func TestTwoNumberSum1(t *testing.T) {
+func TestTwoNumberSum(t *testing.T) {
 	caseData := []TestCase{
 		{
 			[]int{4, 6, 1},
