@@ -1,9 +1,11 @@
-package main
+package twonumbersum_test
 
 import (
 	"fmt"
 	"reflect"
 	"testing"
+
+	td "algoexpert-solution/1.easy/two_number_sum"
 )
 
 type TestCase struct {
@@ -33,7 +35,7 @@ func TestTwoNumberSum1(t *testing.T) {
 
 	for _, tc := range caseData {
 		t.Run(fmt.Sprintf("TwoNumberSum1(%v, %v)", tc.arg1, tc.arg2), func(t *testing.T) {
-			result := TwoNumberSum1(tc.arg1, tc.arg2)
+			result := td.TwoNumberSum1(tc.arg1, tc.arg2)
 			if !reflect.DeepEqual(result, tc.want) {
 				t.Errorf("TwoNumberSum1(%v, %v) = %v, want : %v", tc.arg1, tc.arg2, result, tc.want)
 			}
