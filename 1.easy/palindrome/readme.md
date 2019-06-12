@@ -4,7 +4,7 @@ Problem:
 - Tulis suatu function yang dapat mengecek palindrome
 - palindrome merupakan 
 
-// Solution 1
+// Solution 1 O(n)
 ```
 tmpStr = ""
 
@@ -16,7 +16,7 @@ if str != tmpStr
 
 return true
 ```
-// Solution 2
+// Solution 2 O(n/2)
 
 ```
 middle = len(str) / 2

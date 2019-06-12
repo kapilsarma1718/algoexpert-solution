@@ -15,3 +15,5 @@ If you can't solve it
 
 If you can solve it
 - TDD the problem
+
+4. should include time complexity
