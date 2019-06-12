@@ -26,12 +26,23 @@ func TestLargestSumContigousSubArray(t *testing.T) {
 			[]int{3, 4, -6, 7, 8},
 			16,
 		},
+		{
+			[]int{-3, -2, 100},
+			100,
+		},
+		{
+			[]int{8, 5, -9, 1, 3, -2, 3, 4, 7, 2, -18, 6, 3, 1, -5, 6, 20, -23, 15, 1, -3, 4},
+			35,
+		},
 	}
 
 	for _, tc := range caseData {
 		t.Run(fmt.Sprintf("BruteForce(%v)", tc.arg), func(t *testing.T) {
 			result := td.BruteForce(tc.arg)
-			t.Errorf("BruteForce(%v) = %v, want : %v", tc.arg, result, tc.want)
+			if result != tc.want {
+
+				t.Errorf("BruteForce(%v) = %v, want : %v", tc.arg, result, tc.want)
+			}
 		})
 	}
 }
