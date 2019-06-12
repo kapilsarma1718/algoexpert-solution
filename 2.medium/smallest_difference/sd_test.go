@@ -26,6 +26,11 @@ func TestSmallestDifference(t *testing.T) {
 			[]int{26, 134, 135, 15, 17},
 			[]int{28, 26},
 		},
+		{
+			[]int{5},
+			[]int{5},
+			[]int{5, 5},
+		},
 	}
 
 	for _, tc := range caseData {

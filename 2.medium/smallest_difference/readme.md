@@ -18,4 +18,3 @@ b. array integer, value pasangan angka
 
 **Goal**
 Temukan pasangan angka dari array 1 dan array 2, cari perbedaan absolut dari pasangan angka paling dekat ke 0
-
