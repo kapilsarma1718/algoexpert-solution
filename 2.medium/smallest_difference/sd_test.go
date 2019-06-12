@@ -35,5 +35,12 @@ func TestSmallestDifference(t *testing.T) {
 				t.Errorf("SmallestDifference1(%v, %v) = %v, want : %v", tc.arg1, tc.arg2, result, tc.want)
 			}
 		})
+
+		t.Run(fmt.Sprintf("SmallestDifference2(%v, %v)", tc.arg1, tc.arg2), func(t *testing.T) {
+			result := td.SmallestDifference2(tc.arg1, tc.arg2)
+			if !reflect.DeepEqual(result, tc.want) {
+				t.Errorf("SmallestDifference2(%v, %v) = %v, want : %v", tc.arg1, tc.arg2, result, tc.want)
+			}
+		})
 	}
 }
