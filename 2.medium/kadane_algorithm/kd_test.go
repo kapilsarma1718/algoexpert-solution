@@ -37,6 +37,14 @@ func TestLargestSumContigousSubArray(t *testing.T) {
 	}
 
 	for _, tc := range caseData {
+		t.Run(fmt.Sprintf("Kadanes(%v)", tc.arg), func(t *testing.T) {
+			result := td.Kadanes(tc.arg)
+			if result != tc.want {
+
+				t.Errorf("Kadanes(%v) = %v, want : %v", tc.arg, result, tc.want)
+			}
+		})
+
 		t.Run(fmt.Sprintf("BruteForce(%v)", tc.arg), func(t *testing.T) {
 			result := td.BruteForce(tc.arg)
 			if result != tc.want {

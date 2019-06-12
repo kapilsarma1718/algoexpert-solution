@@ -23,5 +23,22 @@ func BruteForce(array []int) int {
 }
 
 func Kadanes(array []int) int {
-	return 1
+	maxSum := array[0]
+	tmpSum := array[0]
+
+	for i := 1; i < len(array); i++ {
+		num := array[i]
+		sumHere := tmpSum + num
+		tmpSum = max(sumHere, num)
+		maxSum = max(maxSum, tmpSum)
+	}
+
+	return maxSum
+}
+
+func max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
 }
