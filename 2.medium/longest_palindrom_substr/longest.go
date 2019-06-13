@@ -1,5 +1,6 @@
 package lps
 
+// O(n ^ 3)
 func LongestPalindromeSubStr1(str string) string {
 	longestString := ""
 
@@ -42,6 +43,7 @@ func LongestPalindromeSubStr2(str string) string {
 	return longest
 }
 
+// O(n^2)
 func getLongestPalindrome(str string, begin, end int) string {
 	for begin >= 0 && end < len(str) {
 
