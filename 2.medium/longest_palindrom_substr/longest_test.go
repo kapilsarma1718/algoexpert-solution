@@ -37,6 +37,15 @@ func TestLongestPalindromeSubStr(t *testing.T) {
 			}
 
 		})
+
+		t.Run(fmt.Sprintf("LongestPalindromeSubStr2(%v)", tc.arg), func(t *testing.T) {
+			result := td.LongestPalindromeSubStr2(tc.arg)
+
+			if result != tc.want {
+				t.Errorf("LongestPalindromeSubStr2(%v) = %v, want : %v", tc.arg, result, tc.want)
+			}
+
+		})
 	}
 
 }

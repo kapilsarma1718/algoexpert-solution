@@ -20,6 +20,42 @@ func LongestPalindromeSubStr1(str string) string {
 	return longestString
 }
 
+func LongestPalindromeSubStr2(str string) string {
+	longest := str[0:1]
+
+	for i := 1; i < len(str); i++ {
+		tmpLongest := ""
+		odd := getLongestPalindrome(str, i-1, i+1)
+		even := getLongestPalindrome(str, i-1, i)
+
+		if len(odd) > len(even) {
+			tmpLongest = odd
+		} else {
+			tmpLongest = even
+		}
+
+		if len(tmpLongest) > len(longest) {
+			longest = tmpLongest
+		}
+	}
+
+	return longest
+}
+
+func getLongestPalindrome(str string, begin, end int) string {
+	for begin >= 0 && end < len(str) {
+
+		if str[begin] != str[end] {
+			break
+		}
+
+		begin--
+		end++
+	}
+
+	return str[begin+1 : end]
+}
+
 func isPalindrome(str string) bool {
 	lenStr := len(str)
 	middle := lenStr / 2
@@ -41,8 +77,4 @@ func max(x, y int) int {
 		return x
 	}
 	return y
-}
-
-func LongestPalindromeSubStr2(str string) string {
-	return ""
 }
