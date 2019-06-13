@@ -30,6 +30,10 @@ func TestIsPalindrome(t *testing.T) {
 			"",
 			false,
 		},
+		{
+			"a",
+			true,
+		},
 	}
 
 	for _, tc := range caseData {
