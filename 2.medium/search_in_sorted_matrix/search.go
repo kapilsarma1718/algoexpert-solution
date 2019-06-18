@@ -14,7 +14,7 @@ func SearchInSortedMatrix1(matrix [][]int, target int) []int {
 		}
 	}
 
-	return []int{-1, 1}
+	return []int{-1, -1}
 }
 
 // O(n + m)
@@ -35,6 +35,6 @@ func SearchInSortedMatrix2(matrix [][]int, target int) []int {
 		}
 	}
 
-	return []int{-1, 1}
+	return []int{-1, -1}
 
 }

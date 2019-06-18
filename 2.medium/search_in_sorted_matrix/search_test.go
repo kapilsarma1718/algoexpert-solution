@@ -33,7 +33,7 @@ func TestSearchInSortedMatrix(t *testing.T) {
 				{4, 5},
 			},
 			10,
-			[]int{-1, 1},
+			[]int{-1, -1},
 		},
 	}
 
