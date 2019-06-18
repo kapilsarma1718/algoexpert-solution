@@ -2,6 +2,7 @@ package sd
 
 import "sort"
 
+// O(n)
 func SmallestDifference1(arr1, arr2 []int) []int {
 	store := make([]int, 2)
 	diff := 9999

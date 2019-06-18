@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// O(2^n * n)
 func Powerset(array []int) [][]int {
 	sets := [][]int{
 		[]int{},

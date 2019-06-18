@@ -21,6 +21,7 @@ func LongestPalindromeSubStr1(str string) string {
 	return longestString
 }
 
+// O (n ^ 2)
 func LongestPalindromeSubStr2(str string) string {
 	longest := str[0:1]
 

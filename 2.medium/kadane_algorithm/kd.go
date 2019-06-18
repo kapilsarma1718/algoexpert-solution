@@ -22,6 +22,7 @@ func BruteForce(array []int) int {
 	return maxSum
 }
 
+// Time Complexity : O(n)
 func Kadanes(array []int) int {
 	maxSum := array[0]
 	tmpSum := array[0]
