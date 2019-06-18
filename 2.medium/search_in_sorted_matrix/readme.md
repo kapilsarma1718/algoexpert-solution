@@ -2,7 +2,7 @@ search in sorted matrix
 
 Problem:
 
-Diberikan input array 2 dimensi yang sudah diurutkan, temukan index sebuah angka. Jika
+Diberikan input array 2 dimensi dimana baris dan kolom sudah diurutkan, temukan index sebuah angka. Jika
 angka tidak ditemukan, kembalikan [-1,1]
 
 Test Case:
