@@ -46,5 +46,14 @@ func TestSearchInSortedMatrix(t *testing.T) {
 			}
 
 		})
+
+		t.Run(fmt.Sprintf("SearchInSortedMatrix2()"), func(t *testing.T) {
+			result := td.SearchInSortedMatrix2(tc.arg1, tc.arg2)
+
+			if !reflect.DeepEqual(result, tc.want) {
+				t.Errorf("SearchInSortedMatrix2(%v, %v) = %v, want : %v", tc.arg1, tc.arg2, result, tc.want)
+			}
+
+		})
 	}
 }
