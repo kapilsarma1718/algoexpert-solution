@@ -34,21 +34,36 @@ func setupTree1() {
 }
 
 func setupTree2() {
-	tree2 = tt.NewNode("")
+	tree2 = tt.NewNode("A")
 }
 
 func TestDepthFirstSearch(t *testing.T) {
-	caseData := testCase{
+	caseData1 := testCase{
 		[]string{},
 		[]string{"A", "B", "E", "F", "I", "J", "C", "D", "G", "K", "H"},
 	}
 
+	caseData2 := testCase{
+		[]string{},
+		[]string{"A"},
+	}
+
 	t.Run(fmt.Sprintf("test1()"), func(t *testing.T) {
 
-		result := tree1.DepthFirstSearch(caseData.arg)
+		result := tree1.DepthFirstSearch(caseData1.arg)
 
-		if !reflect.DeepEqual(result, caseData.want) {
-			t.Errorf("test1() = %v, want : %v", result, caseData.want)
+		if !reflect.DeepEqual(result, caseData1.want) {
+			t.Errorf("test1() = %v, want : %v", result, caseData1.want)
+		}
+
+	})
+
+	t.Run(fmt.Sprintf("test2()"), func(t *testing.T) {
+
+		result := tree2.DepthFirstSearch(caseData2.arg)
+
+		if !reflect.DeepEqual(result, caseData2.want) {
+			t.Errorf("test2() = %v, want : %v", result, caseData2.want)
 		}
 
 	})
