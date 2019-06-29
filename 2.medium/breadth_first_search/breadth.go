@@ -22,3 +22,20 @@ func (n *Node) AddChildren(names ...string) *Node {
 	}
 	return n
 }
+
+func (n *Node) BreadthFirstSearch(array []string) []string {
+	queue := []*Node{n}
+
+	for len(queue) > 0 {
+		out := queue[0]
+		queue = queue[1:]
+
+		array = append(array, out.Name)
+
+		for _, child := range out.Children {
+			queue = append(queue, child)
+		}
+	}
+
+	return array
+}
