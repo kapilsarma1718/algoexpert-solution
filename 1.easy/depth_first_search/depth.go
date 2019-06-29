@@ -11,3 +11,14 @@ func NewNode(name string) *Node {
 		Children: []*Node{},
 	}
 }
+
+func (n *Node) AddChildren(names ...string) *Node {
+	for _, name := range names {
+		newChild := &Node{
+			Name:     name,
+			Children: []*Node{},
+		}
+		n.Children = append(n.Children, newChild)
+	}
+	return n
+}
