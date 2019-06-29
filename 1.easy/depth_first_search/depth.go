@@ -1,24 +1,24 @@
 package depth
 
 type Node struct {
-	Name     string
-	Children []*Node
+	name     string
+	children []*Node
 }
 
 func NewNode(name string) *Node {
 	return &Node{
-		Name:     name,
-		Children: []*Node{},
+		name:     name,
+		children: []*Node{},
 	}
 }
 
 func (n *Node) AddChildren(names ...string) *Node {
 	for _, name := range names {
 		newChild := &Node{
-			Name:     name,
-			Children: []*Node{},
+			name:     name,
+			children: []*Node{},
 		}
-		n.Children = append(n.Children, newChild)
+		n.children = append(n.children, newChild)
 	}
 	return n
 }
