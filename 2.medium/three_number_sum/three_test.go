@@ -30,6 +30,10 @@ func TestThreeNumberSum(t *testing.T) {
 				[]int{-6, 1, 5},
 			},
 		},
+		{
+			[]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 15}, 5,
+			[][]int{},
+		},
 	}
 
 	for _, tc := range caseData {
