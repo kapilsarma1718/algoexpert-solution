@@ -91,4 +91,31 @@ func (t *BinaryTree) Equals(other *BinaryTree) bool {
 	return true
 }
 
-func (t *BinaryTree) InvertBinaryTree() {}
+func (t *BinaryTree) InvertBinaryTree() {
+	// recursive
+	// t.left, t.right = t.right, t.left
+	// if t.left != nil {
+	// 	t.left.InvertBinaryTree()
+	// }
+
+	// if t.right != nil {
+	// 	t.right.InvertBinaryTree()
+	// }
+
+	// iteration
+	queue := []*BinaryTree{t}
+	for len(queue) > 0 {
+		out := queue[0]
+		queue = queue[1:]
+
+		if out == nil {
+			continue
+		}
+
+		out.left, out.right = out.right, out.left
+
+		queue = append(queue, out.left, out.right)
+
+	}
+
+}
