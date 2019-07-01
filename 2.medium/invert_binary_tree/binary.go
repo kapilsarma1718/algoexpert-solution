@@ -45,3 +45,31 @@ func (t *BinaryTree) InsertAll(values ...int) *BinaryTree {
 	}
 	return t
 }
+
+func (t *BinaryTree) InvertedInsert(value int) *BinaryTree {
+	queue := []*BinaryTree{t}
+	for len(queue) > 0 {
+		out := queue[0]
+		queue = queue[1:]
+
+		if out.right == nil {
+			out.right = NewBinaryTree(value)
+			break
+		} else if out.left == nil {
+			out.left = NewBinaryTree(value)
+			break
+		}
+
+		queue = append(queue, out.right, out.left)
+
+	}
+
+	return t
+}
+
+func (t *BinaryTree) InvertedInsertAll(values ...int) *BinaryTree {
+	for _, value := range values {
+		t.InvertedInsertAll(value)
+	}
+	return t
+}
