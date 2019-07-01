@@ -69,7 +69,7 @@ func (t *BinaryTree) InvertedInsert(value int) *BinaryTree {
 
 func (t *BinaryTree) InvertedInsertAll(values ...int) *BinaryTree {
 	for _, value := range values {
-		t.InvertedInsertAll(value)
+		t.InvertedInsert(value)
 	}
 	return t
 }
@@ -91,6 +91,4 @@ func (t *BinaryTree) Equals(other *BinaryTree) bool {
 	return true
 }
 
-func (t *BinaryTree) Invert() *BinaryTree {
-	return t
-}
+func (t *BinaryTree) InvertBinaryTree() {}
