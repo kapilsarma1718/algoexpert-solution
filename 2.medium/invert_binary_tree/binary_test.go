@@ -1,11 +1,12 @@
 package ibt_test
 
 import (
-	tt "algoexpert-solution/2.medium/invert_binary_tree"
+	"fmt"
+	"testing"
 )
 
-var tree1 *tt.BinaryTree
-
-func setupTree1() {
-
+func TestTree1(t *testing.T) {
+	t.Run(fmt.Sprintf("()"), func(t *testing.T) {
+		t.Errorf("() = %v, want : %v")
+	})
 }

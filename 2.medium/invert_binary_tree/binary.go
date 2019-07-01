@@ -73,3 +73,24 @@ func (t *BinaryTree) InvertedInsertAll(values ...int) *BinaryTree {
 	}
 	return t
 }
+
+func (t *BinaryTree) Equals(other *BinaryTree) bool {
+
+	if other == nil || t.value != other.value {
+		return false
+	}
+
+	if t.left != nil && !t.left.Equals(other.left) {
+		return false
+	}
+
+	if t.right != nil && !t.right.Equals(other.right) {
+		return false
+	}
+
+	return true
+}
+
+func (t *BinaryTree) Invert() *BinaryTree {
+	return t
+}
